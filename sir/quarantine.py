@@ -16,14 +16,13 @@
 #
 from typing import Iterable, Tuple
 
-import numpy as np
-from scipy.integrate import odeint
-from ipywidgets import interact
 import ipywidgets as widgets
-
 import matplotlib.pyplot as plt
-import sir.base
+import numpy as np
+from ipywidgets import interact
+from scipy.integrate import odeint
 
+import sir.base
 
 Population = Tuple[float, float, float]
 Params = Tuple[float, float, float, float, float, float]

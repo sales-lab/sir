@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='sir',
-    version='0.1.0',
+    version='0.2.0',
     description='SIR Infection Model',
     long_description="""\
 Numerical solver for the SIR infection model by Kermack and McKendrick.
@@ -20,4 +20,5 @@ Numerical solver for the SIR infection model by Kermack and McKendrick.
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "Operating System :: OS Independent",
     ],
+    include_package_data=True,
 )
