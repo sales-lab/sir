@@ -15,7 +15,18 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 import matplotlib as mpl
+import numpy as np
 
 
 def larger_figures():
     mpl.rc('figure', figsize=(14, 7))
+
+
+def combinations(*choices):
+    """
+    Build a matrix with all combinations of input variables.
+
+    :param choices: admissible values for each variable
+    :return: a bi-dimensional numpy array
+    """
+    return np.asarray(np.meshgrid(*choices)).T.reshape((-1, len(choices)))
