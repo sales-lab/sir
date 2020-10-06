@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='sir',
-    version='0.3.0',
+    version='0.3.1',
     description='SIR Infection Model',
     long_description="""\
 Numerical solver for the SIR infection model by Kermack and McKendrick.
