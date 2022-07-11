@@ -1,5 +1,5 @@
 # sir: numerical solver for the SIR infection model
-# Copyright (C) 2018 Gabriele Sales
+# Copyright (C) 2018-2022 Gabriele Sales
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -30,3 +30,19 @@ def combinations(*choices):
     :return: a bi-dimensional numpy array
     """
     return np.asarray(np.meshgrid(*choices)).T.reshape((-1, len(choices)))
+
+
+def linear_points(n=100):
+    """
+    Generate a cloud of 2D points, where y depends linearly on x.
+
+    Some random noise is added to y.
+
+    :param n: number of points to generate
+    :return: a tuple containing two numpy arrays, for x and y coordinates
+    """
+    x = np.sort(np.random.rand(n))
+    alpha = np.random.randn()
+    beta = np.random.rand()
+    y = beta * x + alpha + np.random.randn(x.shape[0]) * 1e-2
+    return x, y
